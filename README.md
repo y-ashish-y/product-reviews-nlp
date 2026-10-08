@@ -1,23 +1,30 @@
-# Analysing Product Reviews by Shoppers
+# Product Reviews NLP
 
-Data Set: https://www.kaggle.com/datafiniti/grammar-and-online-product-reviews 
+Exploratory analysis and modeling of shopper reviews: rating patterns, text cleaning, top-rated product mining, bag-of-words features, a supervised model that predicts ratings, and unsupervised learning on review text.
 
-You need to perform the following exercise on the given dataset. 
+**Dataset:** [Grammar and Online Product Reviews](https://www.kaggle.com/datafiniti/grammar-and-online-product-reviews) (Datafiniti, Kaggle)
 
-Perform EDA and visualize the data to get some meaningful insights
+## Contents
 
-* Apply Unsupervised Learning on review texts
+| File | Description |
+|---|---|
+| `Analysing_Product_Reviews_by_Shoppers.ipynb` | End-to-end notebook: EDA → cleaning → features → models → insights |
 
-* Supervised Machine learning model to predict ratings
+## Approach
 
-* Evaluate your supervised machine learning model
+1. **EDA:** rating distribution and review length
+2. **Text cleaning:** NLTK stop-word removal and normalization
+3. **Top-rated products:** identify leading products and mine reasons from top-rated comments
+4. **Features:** bag-of-words representation
+5. **Supervised model:** predict ratings on a train/test split, scored with accuracy
+6. **Unsupervised learning:** KMeans clustering and LDA topic modeling (gensim) on review text
 
-Also, find the following insights:
+## Run
 
-    Find Shoppers satisfaction
+Open the notebook in Jupyter or Google Colab. It uses the standard Python data stack:
 
-    Find Frequent words in reviews
+```bash
+pip install pandas numpy matplotlib seaborn plotly scikit-learn nltk gensim wordcloud
+```
 
-    Find the most popular product that shoppers have purchased
-
-    Find 3 reasons in top-rated comments why people liked it. 
+Download the dataset from Kaggle and point the notebook's data path at the CSV.
